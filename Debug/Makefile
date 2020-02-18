@@ -35,11 +35,14 @@ SUBDIRS :=
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../DIO.c \
+../DIO_config.c \
 ../ICU.c \
 ../ICU_Config.c \
 ../Interrupts.c \
 ../main.c \
-../US.c
+../US.c \
+../UsConfig.c
 
 
 PREPROCESSING_SRCS += 
@@ -49,35 +52,47 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+DIO.o \
+DIO_config.o \
 ICU.o \
 ICU_Config.o \
 Interrupts.o \
 main.o \
-US.o
+US.o \
+UsConfig.o
 
 
 OBJS_AS_ARGS +=  \
+DIO.o \
+DIO_config.o \
 ICU.o \
 ICU_Config.o \
 Interrupts.o \
 main.o \
-US.o
+US.o \
+UsConfig.o
 
 
 C_DEPS +=  \
+DIO.d \
+DIO_config.d \
 ICU.d \
 ICU_Config.d \
 Interrupts.d \
 main.d \
-US.d
+US.d \
+UsConfig.d
 
 
 C_DEPS_AS_ARGS +=  \
+DIO.d \
+DIO_config.d \
 ICU.d \
 ICU_Config.d \
 Interrupts.d \
 main.d \
-US.d
+US.d \
+UsConfig.d
 
 
 OUTPUT_FILE_PATH +=US.elf
@@ -89,6 +104,12 @@ ADDITIONAL_DEPENDENCIES:=
 OUTPUT_FILE_DEP:= ./makedep.mk
 
 # AVR32/GNU C Compiler
+
+
+
+
+
+
 
 
 
